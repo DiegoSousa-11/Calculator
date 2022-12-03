@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/LogoCalculator.svg" type="image/x-icon" sizes="64x64">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/alertStyle.css">
+    <link rel="stylesheet" href="css/history.css">
+    <link rel="stylesheet" href="css/information.css">
+    <link rel="stylesheet" href="css/colors.css">
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js" defer></script>
+    <script src="script/load.js" defer></script>
+    <script src="script/operations.js" defer></script>
+    <script src="script/calculations.js" defer></script>
+    <script src="script/displayStylization.js" defer></script>
+    <script src="script/historyController.js" defer></script>
+    <script src="script/informationController.js" defer></script>
+    <script src="script/alertController.js" defer></script>
+    <script src="script/switchTheme.js" defer></script>
+    <script src="https://cdn.lordicon.com/qjzruarw.js"></script>
+    <title>Calculator</title>
+</head>
+<body class="lightTheme">
+    <div class="history">
+        <div>
+            <lord-icon
+                src="https://cdn.lordicon.com/weoiqraa.json"
+                colors="primary:white"
+                trigger="hover"
+                class="icon-history"
+                onclick="changeHistoryVisible()">
+            </lord-icon>
+
+            <h1>Histórico</h1>
+            
+            <div class="icon-close" onclick="changeHistoryVisible()">
+                <span class="iconify" data-icon="majesticons:close"></span>
+            </div>
+        </div>
+
+        <div class="historyList">
+        </div>
+    </div>
+
+    <div class="information">
+        <button onclick="changeInformationPopupVisible()">
+            <lord-icon
+                src="https://cdn.lordicon.com/svbmmyue.json"
+                colors="primary:white"
+                trigger="hover"
+                class="icon-information">
+            </lord-icon>
+        </button>
+
+        <div class="informationPopup">
+            <span class="iconify" data-icon="majesticons:close" onclick="changeInformationPopupVisible()"></span>
+            <h2>Informações</h2>
+            <p>Inspirado no <a href="https://dribbble.com/shots/14709020-Calculator">Design de Lucia Scott</a></p>
+            <p>
+                Os ícones usados nesse site foram tirados dos respectivos sites: 
+                <a href="https://lordicon.com">Lordicon</a> e 
+                <a href="https://iconify.design">Iconify</a>
+            </p>
+            <p>⭐️ Caso tenha gostado do projeto, me ajude favoritando o <a>projeto no GitHub</a></p>
+            <p>© 2022 Desenvolvido por <a href="https://www.linkedin.com/in/diego-sousa-28003b209/">Diego de Sousa</a></p>
+        </div>
+    </div>
+
+    <div class="container" id="container">
+        <header>
+            <section class="theme">
+                <div>
+                    <span onclick="switchTheme()" class="iconify" data-icon="eva:sun-outline"></span>
+                </div>
+                <div>
+                    <span onclick="switchTheme()" class="iconify" data-icon="eva:moon-outline"></span>
+                </div>
+            </section>
+
+            <section class="display">
+                <h1 id="displayText">0</h1>
+            </section>
+
+        </header>
+
+        <main>
+            <div>
+                <section class="horizontalOperations">
+                    <button id="clearButton">C</button>
+                    <button id="changeSign">
+                        <span class="iconify" data-icon="fluent:add-subtract-circle-48-regular"></span>
+                    </button>
+                    <button onclick="fillDisplay('%', 'operator')" class="keyboardOperators">
+                        %
+                    </button>
+                </section>
+
+                <section class="keyboard">
+                    <button class="keyboardNumbers">7</button>
+
+                    <button class="keyboardNumbers">8</button>
+
+                    <button class="keyboardNumbers">9</button>
+                        
+                    <button class="keyboardNumbers">4</button>
+                        
+                    <button class="keyboardNumbers">5</button>
+                        
+                    <button class="keyboardNumbers">6</button>
+
+                    <button class="keyboardNumbers">1</button>
+
+                    <button class="keyboardNumbers">2</button>
+
+                    <button class="keyboardNumbers">3</button>
+
+                    <button id="comeBack">
+                        <span class="iconify" data-icon="jam:delete"></span>
+                    </button>
+
+                    <button class="keyboardNumbers">0</button>
+
+                    <button onclick="fillDisplay('.', 'number')">
+                        <span class="iconify" data-icon="fad:digital-dot"></span>
+                    </button>
+                </section>
+            </div>
+
+            <section class="verticalOperations">
+                <button onclick="fillDisplay('÷', 'operator')" class="keyboardOperators">÷</button>
+
+                <button onclick="fillDisplay('×', 'operator')" class="keyboardOperators">×</button>
+
+                <button onclick="fillDisplay('-', 'operator')" class="keyboardOperators">-</button>
+
+                <button onclick="fillDisplay('+', 'operator')" class="keyboardOperators">+</button>
+
+                <button id="equalButton" class="keyboardOperators">=</button>
+            </section>
+        </main>
+    </div>
+
+    <ul class="circles">
+        <li>+</li>
+        <li>2</li>
+        <li>×</li>
+        <li>%</li>
+        <li>3</li>
+        <li>9</li>
+        <li>10</li>
+        <li>-</li>
+        <li>5</li>
+        <li>÷</li>
+    </ul>
+
+    <div class="alertContainer">
+        <div class="alert">
+            <div>
+                <span class="iconify" data-icon="eva:alert-triangle-fill" data-width="20"></span>
+            </div>
+            
+            <p>O formato usado é inválido!</p>
+
+            <span onclick="endAlert()" class="iconify closeIcon" data-icon="eva:close-fill" data-width="20"></span>
+        </div>
+
+        <div class="alertStatusBar">
+            <div></div>
+        </div>
+    </div>
+</body>
+</html>

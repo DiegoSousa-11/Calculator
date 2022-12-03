@@ -1,0 +1,63 @@
+.alertContainer {
+    position: absolute;
+    bottom: -22rem;
+    right: 1rem;
+
+    transition: .5s;
+}
+
+.alert {
+    display: flex;
+    align-items: center;
+    width: 22rem;
+    
+    padding: 15px;
+    padding-bottom: 12px;
+
+    gap: 1rem;
+    
+    background-color: var(--displayColor);
+    color: var(--text);
+    
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.alert div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 2rem;
+    height: 2rem;
+
+    border-radius: 5px;
+
+    background-color: #bd3636;
+    color: #ff6868;
+}
+
+.closeIcon {
+    cursor: pointer;
+    margin-left: auto;
+    color: gray;
+}
+
+.alertStatusBar {
+    width: 22rem;
+    height: .4rem;
+
+    background-color: rgb(214, 214, 214);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.alertStatusBar div {
+    height: .4rem;
+    width: 0rem;
+
+    background-color: rgb(179, 179, 179);
+    border-radius: 15px;
+
+    transition: 0.5s;
+}

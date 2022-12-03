@@ -1,0 +1,19 @@
+.darkTheme {
+    --background: #121212;
+    --text: white;
+    --keyboardColor: #2a2d37;
+    --keyboardButtonsColor: #272b33;
+    --displayColor: #22252d;
+    --modal: rgb(28 28 28);
+    --modalLine: #121212;
+}
+
+.lightTheme {
+    --background: #4e54c8;
+    --text: #292d36;
+    --keyboardColor: #f8f8f8;
+    --keyboardButtonsColor: #f0f0f0;
+    --displayColor: white;
+    --modal: #3A3E94;
+    --modalLine: #33377c;
+}

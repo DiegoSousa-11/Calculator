@@ -1,0 +1,207 @@
+.history {
+    cursor: pointer;
+    position: absolute;
+
+    left: 20px;
+    top: 20px;
+    
+    width: 3rem;
+    height: 3rem;
+
+    z-index: 10;
+
+    background-color: var(--modal);
+
+    border-radius: 8px;
+    transition: .5s;
+}
+
+.history .icon-close {
+    cursor: pointer;
+    position: relative;
+    display: none;
+
+    top: .5rem;
+    font-size: 2.4rem;
+    margin-right: .55rem;
+
+    color: white;
+
+    overflow: hidden;
+}
+
+.history .icon-close svg {
+    transition: 0.5s;
+}
+
+.history .icon-close:hover svg {
+    transform: scale(1.08);
+}
+
+.history h1 {
+    display: none;
+
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+
+    color: white;
+}
+
+.historyList {
+    overflow-y: scroll;
+
+    height: 100%;
+    max-height: 80vh;
+
+    visibility: hidden;
+    opacity: 0;
+
+    transition: 1s;
+}
+
+.historyList p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    margin: auto;
+
+    height: 100%;
+    width: 80%;
+
+    font-size: 1.5rem;
+    font-weight: 500;
+
+    color: rgb(255 255 255 / 22%);
+}
+
+.historyList::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.historyList::-webkit-scrollbar-thumb {
+    background-color: #121212;
+    border-radius: 25px;
+}
+
+.historyList::-webkit-scrollbar {
+    width: 5px;
+}
+
+.historyList h2 {
+    width: 92%;
+    padding: .8rem;
+    margin: .6rem;
+    color: white;
+    border-bottom: 2px solid var(--modalLine);
+}
+
+.history > div:first-of-type {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.history-open {
+    cursor: auto;
+    -webkit-animation: open-history 2s both;
+    animation: open-history 2s both;
+    animation-fill-mode: forwards;
+}
+
+.history-close {
+    cursor: pointer;
+    -webkit-animation: close-history 2s both;
+    animation: close-history 2s both;
+    animation-fill-mode: forwards;
+}
+
+.history-open .icon-close {
+    display: block;
+}
+
+.history-open h1, .history-open .historyList {
+    display: block;
+    -webkit-animation: isVisible 2s both;
+    animation: isVisible 2s both;
+    animation-fill-mode: forwards;
+}
+
+.history-open .historyList {
+    visibility: visible;
+    opacity: 1;
+}
+
+.icon-history {
+    position: relative;
+    top: .55rem;
+    left: .55rem;
+    width: 2rem;
+}
+
+@keyframes open-history {
+    0% {
+        width: 3rem;
+        height: 3rem;
+    }
+    20% {
+        width: 25rem;
+        height: 4rem;
+        padding: 0;
+    }
+    100% {
+        width: 25rem;
+        height: 95vh;
+        padding: .8rem;
+    }
+}
+
+@keyframes close-history {
+    0% {
+        width: 25rem;
+        height: 95vh;
+        padding: .8rem;
+    }
+    20% {
+        height: 3rem;
+        padding: 0;
+    }
+    100% {
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+@keyframes isVisible {
+    0% {
+        display: none;
+        opacity: 0;
+        transform: translateY(-2rem);
+    }
+    20% {
+        opacity: 0;
+        transform: translateY(-2rem);
+    }
+    100% {
+        display: block;
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+}
+
+@keyframes notIsVisible {
+    0% {
+        display: block;
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+    20% {
+        transform: translateY(-2rem);
+    }
+    100% {
+        display: none;
+        opacity: 0;
+        transform: translateY(-2rem);
+    }
+}

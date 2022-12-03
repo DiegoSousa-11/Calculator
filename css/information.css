@@ -1,0 +1,109 @@
+.information button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    cursor: pointer;
+    position: absolute;
+
+    left: calc(40px + 3rem);
+    top: 20px;
+    
+    width: 3rem;
+    height: 3rem;
+
+    z-index: 8;
+
+    background-color: var(--modal);
+
+    border: 0;
+    border-radius: 8px;
+
+    transition: .5s;
+}
+
+.icon-information {
+    width: 75%;
+}
+
+.informationPopup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    position: absolute;
+    left: calc(40px + 1.5rem);
+    top: calc(20px + 3.5rem);
+
+    width: 22rem;
+    padding: 1.5rem;
+
+    background-color: var(--modal);
+    color: white;
+
+    z-index: 8;
+
+    border-radius: 5px;
+    
+    transition: .5s;
+
+    transform: scale(0);
+    overflow: hidden;
+}
+
+.informationPopup h2 {
+    margin-bottom: .5rem;
+}
+
+.informationPopup p {
+    margin-block: .5rem;
+}
+
+.informationPopup a {
+    color: rgba(255, 255, 255, 0.22);
+    text-decoration: none;
+}
+
+.informationPopup .iconify {
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+    font-size: 1.5rem;
+}
+
+.informationPopup-close {
+    -webkit-animation: informationPopup-close .5s both;
+    animation: informationPopup-close .5s both;
+    animation-fill-mode: forwards;
+}
+
+.informationPopup-open {
+    -webkit-animation: informationPopup-open .5s both;
+    animation: informationPopup-open .5s both;
+    animation-fill-mode: forwards;
+}
+
+@keyframes informationPopup-open {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes informationPopup-close {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
