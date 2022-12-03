@@ -29,7 +29,13 @@ function stylizeDisplay() {
 var fontSize = window.screen.width > 390 ? 2.5 : 1.5;
 
 window.addEventListener('orientationchange', (e) => {
-    fontSize = window.screen.width > 390 ? 2.5 : 1.5;
+    if(window.orientation === 0)
+    {
+        fontSize = window.screen.width > 390 ? 2.5 : 1.5;
+    }
+    else{
+        fontSize = window.screen.height > 390 ? 2.5 : 1.5;
+    }
 })
 
 const increaseTextSize = () => {
@@ -56,7 +62,13 @@ const defaultTextSize = () => {
     if(surplusText > 0)
         fontSize = fontSize + (fontSize * 0.015 * surplusText);
     else
-        fontSize = 2.5;
+        if(window.orientation === 0)
+        {
+            fontSize = window.screen.width > 390 ? 2.5 : 1.5;
+        }
+        else{
+            fontSize = window.screen.height > 390 ? 2.5 : 1.5;
+        }
 
     displayText.style.fontSize = `${fontSize}rem`;
     adjustAlignText();
