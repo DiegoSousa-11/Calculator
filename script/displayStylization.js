@@ -27,6 +27,11 @@ function stylizeDisplay() {
 }
 
 var fontSize = window.screen.width > 390 ? 2.5 : 1.5;
+
+window.addEventListener('orientationchange', (e) => {
+    fontSize = window.screen.width > 390 ? 2.5 : 1.5;
+})
+
 const increaseTextSize = () => {
     if(fontSize < 2.5) {
         fontSize = fontSize + (fontSize * 0.015);
