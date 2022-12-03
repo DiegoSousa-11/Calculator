@@ -28,14 +28,14 @@ Esse projeto foi desenvolvido com o objetivo de aprimorar meus conhecimentos em 
 
 #### Tema claro
 <p align="center">
-    <img width="49%" alt="Calculating" title="Calculating" src="img/Calculating.gif"/>
-    <img width="49%" alt="History" title="History" src="img/History.gif"/>
+    <img width="49%" alt="Calculating" title="Calculating" src="img/Calculating.png"/>
+    <img width="49%" alt="History" title="History" src="img/History.png"/>
 </p>
 
 #### Tema escuro
 <p align="center">
-    <img width="49%" alt="Calculating" title="Calculating" src="img/Calculating(DarkTheme).gif"/>
-    <img width="49%" alt="History" title="History" src="img/History(DarkTheme).gif"/>
+    <img width="49%" alt="Calculating" title="Calculating" src="img/Calculating(DarkTheme).png"/>
+    <img width="49%" alt="History" title="History" src="img/History(DarkTheme).png"/>
 </p>
 
 ## :hammer_and_wrench: **Tecnologias**
