@@ -93,7 +93,7 @@ document.body.addEventListener("keydown", (e) => {
 })
 
 window.addEventListener('orientationchange', (e) => {
-    if(orientation !== 0) {
+    if(orientation !== 0 && window.screen.height <= 580) {
         startAlert("Recomendamos virar o celular");
     }
 })

@@ -1,5 +1,5 @@
 <p align="center">
-    <img width="200px" alt="Logo" title="Logo" src="img/LogoCalculator.svg"/>
+    <img width="150px" alt="Logo" title="Logo" src="img/LogoCalculator.svg"/>
     <p align="center">Essa moderna calculadora irá te ajudar a realizar os cáculos de adição, subtração, multiplicação, divisão e porcentagem 👨🏻‍💻📈📐</p>
 </p>
 
@@ -17,7 +17,7 @@
 </h4>
 
 ## :computer: **Projeto**
-Esse projeto foi desenvolvido com o objetivo de aprimorar meus conhecimentos em HTML, CSS, JavaScript e alguns conceitos do Clean Code. Além disso, um dos grandes objetivos do projeto era produzir uma página com um Design moderno e com diversas animações, trazendo uma melhor experiência para o usuário. Por fim, o Design de <a href="https://dribbble.com/shots/14709020-Calculator">Lucia Scott</a> foi utilizado como base e os ícones foram obtidos a partir dos respectivos sites: <a href="https://lordicon.com">Lordicon</a> e <a href="https://iconify.design">Iconify</a> :wink: !
+Esse projeto foi desenvolvido com o objetivo de aprimorar meus conhecimentos em HTML, CSS, JavaScript, git e alguns conceitos do Clean Code. Além disso, um dos grandes objetivos do projeto era produzir uma página com um Design moderno e com diversas animações, trazendo uma melhor experiência para o usuário. Por fim, o Design de <a href="https://dribbble.com/shots/14709020-Calculator">Lucia Scott</a> foi utilizado como base e os ícones foram obtidos a partir dos respectivos sites: <a href="https://lordicon.com">Lordicon</a> e <a href="https://iconify.design">Iconify</a> :wink: !
 
 ## :camera: **Demonstração**
 

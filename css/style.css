@@ -185,21 +185,12 @@ main section button .iconify {
     font-size: 2rem;
 }
 
-@media (orientation: landscape) and (max-height: 820px) {
-    main .verticalOperations {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    main .keyboard {
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    }
-}
-
 @media (max-height: 650px) {
     main section button {
         width: 3rem;
         height: 3rem;
+
+        margin: 8px;
 
         font-size: 1rem;
         border-radius: 10px;
@@ -210,6 +201,8 @@ main section button .iconify {
     main section button {
         width: 2.7rem;
         height: 2.7rem;
+
+        margin: 6px;
 
         font-size: 1rem;
         border-radius: 10px;
@@ -239,11 +232,63 @@ main section button .iconify {
         width: 2.2rem;
         height: 2.2rem;
 
+        margin: 5px;
+
         font-size: .8rem;
     }
 
     main section button:active::before {
         width: 2.4rem;
         height: 2.4rem;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 400px) {
+    .container {
+        border-radius: 15px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    main section button {
+        width: 2rem;
+        height: 2rem;
+
+        margin: 3px;
+
+        font-size: .8rem;
+    }
+
+    main section button:active::before {
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+
+    header .theme {
+        margin: .8rem auto;
+        font-size: 1rem;
+        height: 2rem;
+    }
+
+    .display h1 {
+        font-size: 1.2rem;
+        height: 15vh;
+    }
+
+    main section button .iconify {
+        font-size: 1.4rem;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 580px) {
+    main .verticalOperations {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    main .keyboard {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     }
 }
