@@ -185,6 +185,27 @@ main section button .iconify {
     font-size: 2rem;
 }
 
+@media (orientation: landscape) and (max-height: 820px) {
+    main .verticalOperations {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    main .keyboard {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media (max-height: 650px) {
+    main section button {
+        width: 3rem;
+        height: 3rem;
+
+        font-size: 1rem;
+        border-radius: 10px;
+    }
+}
+
 @media (max-width: 390px) {
     main section button {
         width: 2.7rem;

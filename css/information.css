@@ -86,6 +86,12 @@
     animation-fill-mode: forwards;
 }
 
+@media (max-width: 450px) {
+    .informationPopup {
+        width: 75vw;
+    }
+}
+
 @keyframes informationPopup-open {
     from {
         transform: scale(0);

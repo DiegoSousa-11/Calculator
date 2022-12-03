@@ -140,6 +140,55 @@
     width: 2rem;
 }
 
+@media (max-width: 480px) {
+    .history-open {
+        cursor: auto;
+        -webkit-animation: open-history480 2s both;
+        animation: open-history480 2s both;
+        animation-fill-mode: forwards;
+    }
+
+    .history-close {
+        cursor: pointer;
+        -webkit-animation: close-history480 2s both;
+        animation: close-history480 2s both;
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes open-history480 {
+    0% {
+        width: 3rem;
+        height: 3rem;
+    }
+    20% {
+        width: 80vw;
+        height: 4rem;
+        padding: 0;
+    }
+    100% {
+        width: 80vw;
+        height: 95vh;
+        padding: .8rem;
+    }
+}
+
+@keyframes close-history480 {
+    0% {
+        width: 80vw;
+        height: 95vh;
+        padding: .8rem;
+    }
+    20% {
+        height: 3rem;
+        padding: 0;
+    }
+    100% {
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
 @keyframes open-history {
     0% {
         width: 3rem;
